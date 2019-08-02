@@ -7,11 +7,11 @@
     <br />
     <span>Convert From:</span>
     <select v-model="convertfrom" style="width:200px;font-size:25px;">
-      <option v-for="(a, index) in currencyfrom" v-bind:value="a.name">{{a.desc}}</option>
+      <option v-for="a in currencyfrom" v-bind:value="a.name">{{a.desc}}</option>
     </select>
     <span>Convert To:</span>
     <select v-model="convertto" style="width:200px;font-size:25px;">
-      <option v-for="(a,index) in currencyfrom" v-bind:value="a.name">{{a.desc}}</option>
+      <option v-for="a in currencyfrom" v-bind:value="a.name">{{a.desc}}</option>
     </select>
     <br />
     <br />
@@ -75,7 +75,7 @@ export default {
           break;
       }
       return final;
-    } 
+    }
   }
 };
 </script> 
